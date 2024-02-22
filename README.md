@@ -21,7 +21,6 @@
   - Combination of categorical and integer based data
     - `pd.get_dummies()` will be necessary for converting categorical data
 
-
 **Trend Analysis:**
 - What features yield the most common trends for patients that have dementia?
 - Correlation analysis for each feature
@@ -36,10 +35,10 @@
   - Target: 0 - No dementia; 1 - Yes dementia
 - Potential models:
   - Random Forest (Visualize Feature Importance)
-  - Logistic Regression
-  - Neural Network
+  - Logistic Regression - Wilian
+  - Neural Network - Teresita
   - KNN
-  - XGBoost
+  - XGBoost - Daniel
 
 **Rubric Considerations**
 
