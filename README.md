@@ -1,52 +1,56 @@
-# Diabetes Modeling
+# Dementia Modeling
 
-## Project Proposal - Diabetes Modeling
+## Project Proposal - Dementia Modeling
 
 **Members:** Abel Zemo, Daniel Casey, Jennifer Jones, Teresita Lepasana, and Wilian Uscha
 
 **Decompose the question:**
-- Based on the model we develop using this dataset, what is the likelihood of a patient with similar input data running the risk of having diabetes?
+- Based on the model we develop using this dataset, what is the likelihood of a patient with similar input data running the risk of having dementia?
 
 **Identify Data Sources:**
-- Using a dataset pulled from the National Institute of Diabetes and Digestive and Kidney Diseases, this dataset includes records obtained for the purpose of diagnostically predicting  whether a patient has diabetes, based on certain diagnostic measurements included in the dataset.
-- Data includes 768 entries
-- All patients in the dataset are females, at least 21 years of age, and of Pima Indian heritage
-  - https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset
+- Using a kaggle dataset that scraped data from PUBMED, Online research sources, NHS, Google scholar and consultation with healthcare professionals.
+- Data includes 1000 entries
+- https://www.kaggle.com/datasets/kaggler2412/dementia-patient-health-and-prescriptions-dataset/data
 
 **Pipeline to Retrieve and Clean:**
 - Data In:
   - CSV file
   - All integer based data
 - Data Cleaning/Processing:
-  - Filter outliers
-  - Boxplots, IQRs of each column of data
-  - Cleaning out 0’s where a result of 0 is impossible (blood pressure, skin hardness, etc.)
+  - Filter outliers using Boxplots, IQRs of each column of data
+  - Combination of categorical and integer based data
+    - `pd.get_dummies()` will be necessary for converting categorical data
+
 
 **Trend Analysis:**
-- What columns yield the most common trends for women 21 years or older that have diabetes?
+- What features yield the most common trends for patients that have dementia?
+- Correlation analysis for each feature
 
 **Limitations of the exercise / Tell a story:**
-- Data is limited to females, 21 years or older, with similar heritage
-- Most columns with 0’s have to be treated as null values
+- 1000 entries, low entry dataset - 80/20 train test split
+- What conditions increase the likelihood of having dementia?
+- What correlations are present between the features and the target?
 
 **Machine Learning:**
 - Supervised Learning:
-  - Target: 0 - No diabetes; 1 - Yes diabetes
+  - Target: 0 - No dementia; 1 - Yes dementia
 - Potential models:
-  - Oversampling (Normalize the classes to balance the 0’s and 1’s)
   - Random Forest (Visualize Feature Importance)
   - Logistic Regression
   - Neural Network
   - KNN
+  - XGBoost
 
 **Rubric Considerations**
 
 - Data and data delivery - Kaggle input csv > Pandas/Jupyter notebook > Cleaned output csv
-- Back End (ETL) - Potentially SQLite or SQL (smaller dataset)
-  - Not sure how necessary this is given the size and scope of the data
+- Back End (ETL) - Potentially SQLite (smaller dataset)
 - Visualizations - Matplotlib
 - Group presentations - Google Slides
   - Overview of dataset source and objective
   - Exploratory Data Analysis
   - Outlier Detections/Model Optimizations
   - Modeling Implementation/Results/Group’s Model of Choice
+  - Flask/APIs (Run the model through python)
+  - Create website that can support input data to test the model
+
