@@ -64,7 +64,7 @@
 - XGBoost
 
 **Database**
-Information used in the modeling was output into a sqlite database after preprocessing, but before encoding.
+- Information used in the modeling was output into a sqlite database after preprocessing, but before encoding.
 
 **Deployment:**
-The XGBoost model was deployed on Sagemaker and later used to create a webform application that attempts to predict if the input data reflects a positive or negative case of Dementia
+- The XGBoost model was deployed on Sagemaker and later used to create a webform application that attempts to predict if the input data reflects a positive or negative case of Dementia
