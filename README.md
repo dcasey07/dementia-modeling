@@ -23,7 +23,7 @@
     - `pd.get_dummies()` will be necessary for converting categorical data
     - Removed post-diagnosis features and redundancies (Diabetic, Prescription, Dosage in mg)
    
-**- Features Used in Modeling:**
+**Features Used in Modeling:**
   - AlcoholLevel
   - HeartRate
   - BloodOxygenLevel
@@ -45,7 +45,7 @@
   - Sleep_Quality
   - Chronic_Health_Conditions
  
-**- Target:**
+**Target:**
   - Dementia (1: Positive, 0: Negative) 
 
 **Trend Analysis:**
